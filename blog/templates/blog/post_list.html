@@ -9,16 +9,24 @@
         <h1><a href="/">ИнстаЗаменитель</a></h1>
     </header>
 
-    <article>
-        <time>published: so.me.date</time>
-        <h2><a href="">First post here</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias atque autem delectus distinctio dolores ducimus eaque eius incidunt modi natus, non perspiciatis! Earum eveniet in natus praesentium quia.</p>
-    </article>
+<!--    <article>-->
+<!--        <time>published: so.me.date</time>-->
+<!--        <h2><a href="">First post here</a></h2>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias atque autem delectus distinctio dolores ducimus eaque eius incidunt modi natus, non perspiciatis! Earum eveniet in natus praesentium quia.</p>-->
+<!--    </article>-->
 
+<!--    <article>-->
+<!--        <time>published: so.me.date 2</time>-->
+<!--        <h2><a href="">Second post here</a></h2>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias atque autem delectus distinctio dolores ducimus eaque eius incidunt modi natus, non perspiciatis! Earum eveniet in natus praesentium quia.</p>-->
+<!--    </article>-->
+{% for post in posts %}
     <article>
-        <time>published: so.me.date 2</time>
-        <h2><a href="">Second post here</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias atque autem delectus distinctio dolores ducimus eaque eius incidunt modi natus, non perspiciatis! Earum eveniet in natus praesentium quia.</p>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href=""> {{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+
     </article>
+{% endfor %}
 </body>
 </html>
