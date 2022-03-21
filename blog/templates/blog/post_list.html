@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ИстаЗаменитель</title>
-</head>
-<body>
-    <header>
-        <h1><a href="/">ИнстаЗаменитель</a></h1>
-    </header>
+{% extends 'blog/base.html' %}
 
-<!--    <article>-->
-<!--        <time>published: so.me.date</time>-->
-<!--        <h2><a href="">First post here</a></h2>-->
-<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias atque autem delectus distinctio dolores ducimus eaque eius incidunt modi natus, non perspiciatis! Earum eveniet in natus praesentium quia.</p>-->
-<!--    </article>-->
-
-<!--    <article>-->
-<!--        <time>published: so.me.date 2</time>-->
-<!--        <h2><a href="">Second post here</a></h2>-->
-<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias atque autem delectus distinctio dolores ducimus eaque eius incidunt modi natus, non perspiciatis! Earum eveniet in natus praesentium quia.</p>-->
-<!--    </article>-->
-{% for post in posts %}
-    <article>
-        <time>published: {{ post.published_date }}</time>
-        <h2><a href=""> {{ post.title }}</a></h2>
+{% block content %}
+    {% for post in posts %}
+    <article class="post">
+        <time class="date">
+            {{ post.published_date }}
+        </time>
+        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaksbr }}</p>
-
     </article>
-{% endfor %}
-</body>
-</html>
+    {% endfor %}
+{% endblock %}
