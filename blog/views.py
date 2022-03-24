@@ -44,3 +44,19 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+
+def portfolio(request):
+    return render(request, 'blog/portfolio.html')
+
+
+def home(request):
+    return render(request, 'blog/homepage.html')
+
+
+def about(request):
+    return render(request, 'blog/about.html')
+
+
+def contacts(request):
+    return render(request, 'blog/contacts.html')
+
