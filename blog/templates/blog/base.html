@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static 'css/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/c3a3f9393c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="wrap">
@@ -40,23 +41,19 @@
                  {% endif %}
              </li>
          </ul>
+<!--                  TODO
+                ADD FONTAWESOME ICONS AND SO ON
+-->
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         </div>
 
-
-<!--              <ul>-->
-<!--                  <li><a href="{% url 'portfolio' %}">portfolio</a></li>-->
-<!--                  <li><a href="{% url 'contacts' %}">contacts</a></li>-->
-<!--                  <li><a href="{% url 'about' %}">about me</a></li>-->
-<!--                  <li><a href="{% url 'post_list' %}">blog</a></li>-->
-<!--              </ul>-->
           </nav>
       </div>
     </header>
-    <main class="container">
+    <main class="wrap">
         <div class="row">
             <div class="col">
             {% block content %}

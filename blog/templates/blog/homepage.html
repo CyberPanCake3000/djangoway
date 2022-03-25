@@ -1,5 +1,27 @@
 {% extends 'blog/base.html' %}
-
+{% load static %}
 {% block content %}
-    Here is home page!
+
+        <section>
+            <h1 class="">Hello, world!</h1>
+            <h2>I have something to tell you about myself :)</h2>
+            <div class="main-content">
+                <img width="200px" height="200px" class="round profile-pic" src="{% static 'img/profile.png' %}">
+            </div>
+        </section>
+        <section>
+            <h1>My skills</h1>
+            <h2>Programming languages</h2>
+            <div class="main-content">here is my profile pic</div>
+        </section>
+        <section>
+            <h1>Projects</h1>
+            <h2>I have something to tell you about myself :)</h2>
+            <div class="main-content">here is my profile pic</div>
+        </section>
+        <section>
+            <h1>Get my resume as a document!</h1>
+            <div class="main-content">here is my profile pic</div>
+        </section>
+
 {% endblock %}

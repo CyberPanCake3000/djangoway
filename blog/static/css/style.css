@@ -1,3 +1,4 @@
+
 :root{
     --main-font: "JetBrains Mono", Arial;
     --second-font: "IBM Plex Mono", Arial;
@@ -23,4 +24,33 @@ body{
 header{
     background-color: #C9C9C9;
 }
+.navbar{
+    padding: 0;
+}
+.regular-icon{
+    font-size: 15pt;
+}
+
+main{
+    margin: 0;
+}
+section{
+    padding: 50px 0;
+    min-height: 600px;
+}
+
+h1{
+    font-size: 64px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+profile-pic{
+
+}
+
+
 
