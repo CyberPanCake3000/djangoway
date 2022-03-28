@@ -1,7 +1,17 @@
+@font-face{
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Regular.ttf");
+}
+
+@font-face{
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Regular.ttf");
+}
 
 :root{
     --main-font: "JetBrains Mono", Arial;
     --second-font: "IBM Plex Mono", Arial;
+    --second-color: #2DABD2;
 }
 
 html, body{
@@ -37,20 +47,84 @@ main{
 section{
     padding: 50px 0;
     min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+
+section > .main-content{
+    display: flex;
 }
 
 h1{
     font-size: 64px;
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-}
 
 profile-pic{
 
 }
 
+.ellipse{
+    padding: 20px 30px;
+    border: 2px var(--second-color) solid;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.profile-main-page{
+    margin: 30px auto;
+    width: 70%;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.little-element{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.marg{
+    margin: 20px 0px;
+}
+/*
+.inner-ellipse{
+    text-align: center;
+    margin: 0;
+}
+
+.ell1{
+    margin-bottom: 20px;
+    margin-right: -100px;
+    align-self: flex-end;
+}
+
+.ell2{
+    margin-top: 20px;
+}
+
+.ell3{
+
+}
+
+.ell4{
+    align-self: flex-end;
+}
 
 
+.profile-pic{
+    align-self: center;
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/

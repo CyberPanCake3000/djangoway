@@ -15,3 +15,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Projects(models.Model):
+    name = models.CharField(max_length=100)
+    client = models.CharField(max_length=100)
+    type = models.CharField(max_length=100)
+    description = models.TextField()
+    stack = models.CharField(max_length=100)
+    date_start = models.DateTimeField(blank=True, null=True)
+
